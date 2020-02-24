@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 90px auto;
+    grid-template-rows: 60px auto;
+    grid-template-areas: "header header"
+                        "nav main";
+}
+
+.header {
+    background: white;
+    grid-area: header;
+}
+
+.nav {
+    background: #eee;
+    grid-area: nav;
+}
+
+.main {
+    background: #333;
+    grid-area: main;
+}
