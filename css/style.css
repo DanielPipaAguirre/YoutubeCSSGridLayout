@@ -195,6 +195,26 @@ input:focus {
 }
 
 .main {
-    background: #333;
+    background: #f9f9f9;
     grid-area: main;
+    padding: 40px;
+}
+
+.main__title {
+    margin-bottom: 20px;
+}
+
+.main__videos {
+    display: grid;
+    gap: 40px 20px;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.main__videos a {
+    width: 100%;
+    display: block;
+}
+
+.main__videos a img {
+    width: 100%;
 }
