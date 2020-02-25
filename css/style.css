@@ -26,7 +26,7 @@ input:focus {
     min-height: 100vh;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 90px auto;
+    grid-template-columns: minmax(90px,90px) auto;
     grid-template-rows: 60px auto;
     grid-template-areas: "header header"
                         "nav main";
@@ -34,7 +34,7 @@ input:focus {
 }
 
 .page.active {
-    grid-template-columns: 300px auto;
+    grid-template-columns: minmax(300px,18%) auto;
 }
 
 .header {
@@ -217,4 +217,48 @@ input:focus {
 
 .main__videos a img {
     width: 100%;
+}
+
+@media screen and (max-width: 1120px) {
+    .main__videos {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .header__logo a span {
+        display: none;
+    }
+    .header__search input {
+        min-width: 70%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main__videos {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page {
+        grid-template-rows: auto;
+    }
+    .header {
+        padding: 20px;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        grid-template-areas: "logo buttons"
+                            "search search";
+    }
+    .header__logo a span {
+        display: inline;
+    }
+    .header__search input {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .main__videos {
+        grid-template-columns: 1fr;
+    }
 }
