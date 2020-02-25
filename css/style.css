@@ -159,12 +159,14 @@ input:focus {
 .nav {
     background: #fff;
     grid-area: nav;
+    overflow: hidden;
 }
 
 .nav a {
     display: block;
     padding: 15px 35px;
     color: #000;
+    min-width: 800px;
 }
 
 .nav a:hover {
